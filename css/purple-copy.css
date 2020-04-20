@@ -1,0 +1,13 @@
+a{color:#6a763b;}
+#menu .navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus{color:#6a763b;}
+.footer-toogle .hover i{color:#6a763b;}
+.totop:hover span>a.hover{color:#6a763b;}
+.social-icon li:hover a{background:#6a763b;}
+.home .slides-navigation a:hover{color:#6a763b;}
+.services .services-icon{background:#6a763b;}
+.testimonial .icon-testimonial{color:#ddddb5;}
+.call-ta h2{border-left:3px solid #6a763b;}
+.contact form input,.contact form textarea{border-left:1px solid #6a763b;}
+.contact form input:focus,.contact form textarea:focus{border:1px solid #6a763b;}
