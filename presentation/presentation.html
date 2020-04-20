@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+        <link rel="stylesheet" type="text/css" href="presentation.css">
+        <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+        <body> 
+
+       <!-- <input class="timer" type="button" value="confirm" id="confirm" onclick="time(),show()"> 
+       <input type="button" value="next" id="cont"> -->
+
+        <p style="display:block;">
+              <button class="timer" id="start" onclick="time(),test(),change()" disabled> START</button> 
+              <input type="checkbox" id="ck"/><p id="intro">我已认真阅读以上实验指导语</p>
+              <!-- <input type="button" id="bt" disabled value="继续完成其他项目"/> -->
+              <!-- <img id="popupad" src="img/1.GIF" style="width: 200px;left:50%; margin-left: -100px; top:50%"></img> -->
+              <p id="popupad"> 很感谢您来参加此次实验，请认真阅读指导语。<br>这是一套来自约翰霍普金斯大学的空间想象力测验，你将要求根据题干选出正确答案。<br>在测试中，仅有70%的人可以完全答对。<br>明白上述指导语后，请进击start进入测试，如有不清楚的地方，请询问工作人员。</p>
+        </p>
+
+        <ul id="zong">
+          <li class="fen">
+          <div style="display:none;" class="div" id="div1">
+           <p class="title">将向右倾斜30°的立方体旋转一周，会得到哪个图形？</p>
+                <ul id="row">
+                  <li id="aaa"><input type="radio"  id= "1-1" name="aaa" value="A"><img  name="aa" src="1-1.jpeg" style="width: 200px;"></li>
+                  <li id="aaa"><input type="radio"  id= "1-2" name="aaa" value="B"><img  name="aa" src="1-2.png"  style="width: 200px;"></li>
+                  <li id="aaa"><input type="radio"  id= "1-3" name="aaa" value="C"><img  name="aa" src="1-3.png"  style="width: 200px;"></li>
+                  <li id="aaa"><input type="radio"  id= "1-4" name="aaa" value="D"><img  name="aa" src="1-4.png"  style="width: 200px;"></li>
+                </ul>  
+                <img src="25.png" class="progress" style="width: 1000px;"></img><p id="num">1/4</p>
+                <input class="timer" type="button" value="OK" id="confirm" onclick="document.getElementById('cont').disabled=false;"> 
+                <input class="cont"  type="button" value="NEXT" id="cont" onclick="next(),changee(),time(),inputChecked(),sent()" disabled>
+                
+        </div>
+      </li>   
+        
+      <li class="fen">
+       <div style="display:none;" class="div">
+                 
+               
+                  <p class="title">下面哪一个图形可以折叠成一个正方体？</p>
+                   <ul id="row1">
+                   <li id="li"><input type="radio"  id= "2-1" name="bbb" value="A"><img name="bb" src="2-1.png"  style="width: 200px;"></li>
+                   <li id="li"><input type="radio"  id= "2-2" name="bbb" value="B"><img name="bb" src="2-2.png"  style="width: 200px;"></li>
+                   <li id="li"><input type="radio"  id= "2-3" name="bbb" value="C"><img name="bb" src="2-3.png"  style="width: 200px;"></li>
+                   <li id="li"><input type="radio"  id= "2-4" name="bbb" value="D"><img name="bb" src="2-4.png"  style="width: 200px;"></li>
+                  </ul> 
+                  <img src="50.png" class="progress" style="width: 1000px;"><p id="num">2/4</p>
+                  <input class="timer" type="button" value="OK" id="confirm" onclick="document.getElementById('cont1').disabled=false;"> 
+                  <input class="cont"  type="button" value="NEXT" id="cont1" onclick="next(),changeee(),time(),inputCheckedd(),sentt()" disabled>
+                
+              
+        </div>
+      </li>
+            
+      <li class="fen">       
+        <div style="display:none;" class="div">
+                 
+              
+                <p class="title">下面哪一个图形与众不同？</p>
+                <ul id="row2">
+                 <li id="li"><input type="radio"  id= "3-1" name="ccc" value="A"><img name="cc" src="3-1.png"  style="width: 200px;"></li>
+                 <li id="li"><input type="radio"  id= "2-2" name="ccc" value="B"><img name="cc" src="3-2.png"  style="width: 200px;"></li>
+                 <li id="li"><input type="radio"  id= "3-3" name="ccc" value="C"><img name="cc" src="3-3.png"  style="width: 200px;"> </li>
+                 <li id="li"><input type="radio"  id= "3-4" name="ccc" value="D"><img name="cc" src="3-4.png"  style="width: 200px;"> </li>
+                </ul> 
+                <img src="75.png" class="progress" style="width: 1000px;"><p id="num">3/4</p>
+                <input class="timer" type="button" value="OK" id="confirm" onclick="document.getElementById('cont2').disabled=false;"> 
+                <input class="cont" type="button" value="NEXT" id="cont2" onclick="next(),changeeee(),time(),inputCheckeddd(),senttt()" disabled>
+            
+      </div>
+</li>
+
+<li calss="fen">
+      <div style="display:none;" class="div">
+                 
+             
+               <p class="title">下面哪一个图形可以折叠成一个正方体？</p>
+                <ul id="row3">
+                 <li id="li"><input type="radio"  id= "4-1" name="ddd" value="A"><img name="dd" src="2-1.png"  style="width: 200px;"></li>
+                 <li id="li"><input type="radio"  id= "4-2" name="ddd" value="B"><img name="dd" src="2-2.png"  style="width: 200px;"></li>
+                 <li id="li"><input type="radio"  id= "4-3" name="ddd" value="C"><img name="dd" src="2-3.png"  style="width: 200px;"> </li>
+                 <li id="li"><input type="radio"  id= "4-4" name="ddd" value="D"><img name="dd" src="2-4.png"  style="width: 200px;"> </li>
+                </ul> 
+                <img src="100.png" class="progress" style="width: 1000px;"><p id="num">4/4</p>
+                <input class="timer" type="button" value="OK" id="confirm" onclick="document.getElementById('cont3').disabled=false;"> 
+                <input class="cont" type="button" value="NEXT" id="cont3" onclick="next(),time(),inputCheckedddd(),sentttt()" disabled>
+    
+        </div>
+      </li>
+      </ul>
+      
+        <div style="display:none;" class="div">
+        
+        
+                <span id="ty">感谢你的参与与支持！🥳</span>
+        
+        
+        </div>
+       
+       <script type="text/javascript"> 
+
+       window.onload=function(){
+         var ck=document.getElementById("ck");
+         var bt=document.getElementById("start");
+         ck.onclick=function(){
+           if(this.checked==true){
+              bt.disabled=false;
+           }
+           else{
+             bt.disabled=true;
+           }
+         }
+       }
+
+      //  function chang() {
+      //   var ulEle = document.getElementById("zong");
+      //   var liList = ulEle.getElementsByClassName("fen");
+      //   var leng = liList.length;
+      //   var lis = Array.prototype.slice.call(liList, 0);
+      //   var idx = leng;
+      //   while(idx-- > 0)
+      //   ulEle.insertBefore(lis[idx],lis[parseInt(Math.random() * lis.length)])
+    
+      //   $("#zong fen").each(function(){
+      //   if(parseInt(Math.random()*2)==0){
+      //   $(this).prependTo($(this).parent());
+      //               }
+      //           }); }
+
+      
+       function inputChecked() {
+       var inputSelect = document.getElementsByName("aaa");
+       for (var i = 0, len = inputSelect.length; i < len; i++) {
+       if (inputSelect[i].checked == true && inputSelect[i].value === "A") {
+      alert("恭喜你，答对了！🎉");
+      console.log(inputSelect[i].id && "true");
+       }else if (inputSelect[i].checked == true && inputSelect[i].value !== "A") {
+      alert("很抱歉，不是这个答案😢");
+      console.log(inputSelect[i].id && "false");
+     
+      }
+      }
+      }
+
+       function inputCheckedd() {
+       var inputSelect = document.getElementsByName('bbb');
+       for (var i = 0, len = inputSelect.length; i < len; i++) {
+       if (inputSelect[i].checked == true && inputSelect[i].value==="A") {
+       alert("恭喜你，答对了！🎉");
+       console.log(inputSelect[i].id && "true");
+      }else if (inputSelect[i].checked == true && inputSelect[i].value !== "A") {
+      alert("很抱歉，不是这个答案😢");
+      console.log(inputSelect[i].id && "false");
+       }
+       }
+       }
+
+       function inputCheckeddd() {
+       var inputSelect = document.getElementsByName('ccc');
+       for (var i = 0, len = inputSelect.length; i < len; i++) {
+       if (inputSelect[i].checked == true && inputSelect[i].value==="A") {
+       alert("恭喜你，答对了！🎉");
+       console.log(inputSelect[i].id && "true");
+      }else if (inputSelect[i].checked == true && inputSelect[i].value !== "A") {
+      alert("很抱歉，不是这个答案😢");
+      console.log(inputSelect[i].id && "false");
+       }
+       }
+       }
+
+       function inputCheckedddd() {
+       var inputSelect = document.getElementsByName('ddd');
+       for (var i = 0, len = inputSelect.length; i < len; i++) {
+       if (inputSelect[i].checked == true && inputSelect[i].value==="A") {
+       alert("恭喜你，答对了！🎉");
+       console.log(inputSelect[i].id && "true");
+      }else if (inputSelect[i].checked == true && inputSelect[i].value !== "A") {
+      alert("很抱歉，不是这个答案😢");
+      console.log(inputSelect[i].id && "false");
+       }
+       }
+       }
+
+    
+
+     function change() {
+      var ulEle = document.getElementById("row");
+        var liList = ulEle.getElementsByClassName("li");
+        var leng = liList.length;
+        var lis = Array.prototype.slice.call(liList, 0);
+        var idx = leng;
+        while(idx-- > 0)
+        ulEle.insertBefore(lis[idx],lis[parseInt(Math.random() * lis.length)])
+    
+        $("#row li").each(function(){
+        if(parseInt(Math.random()*2)==0){
+        $(this).prependTo($(this).parent());
+                    }
+                }); 
+       }
+
+       function changee() {
+        var ulEle = document.getElementById("row1");
+        var liList = ulEle.getElementsByClassName("li");
+        var leng = liList.length;
+        var lis = Array.prototype.slice.call(liList, 0);
+        var idx = leng;
+        while(idx-- > 0)
+        ulEle.insertBefore(lis[idx],lis[parseInt(Math.random() * lis.length)])
+    
+        $("#row1 li").each(function(){
+        if(parseInt(Math.random()*2)==0){
+        $(this).prependTo($(this).parent());
+                    }
+                }); 
+       }
+
+       function changeee() {
+        var ulEle = document.getElementById("row2");
+        var liList = ulEle.getElementsByClassName("li");
+        var leng = liList.length;
+        var lis = Array.prototype.slice.call(liList, 0);
+        var idx = leng;
+        while(idx-- > 0)
+        ulEle.insertBefore(lis[idx],lis[parseInt(Math.random() * lis.length)])
+    
+        $("#row2 li").each(function(){
+        if(parseInt(Math.random()*2)==0){
+        $(this).prependTo($(this).parent());
+                    }
+                }); 
+       }
+
+       function changeeee() {
+        var ulEle = document.getElementById("row3");
+        var liList = ulEle.getElementsByClassName("li");
+        var leng = liList.length;
+        var lis = Array.prototype.slice.call(liList, 0);
+        var idx = leng;
+        while(idx-- > 0)
+        ulEle.insertBefore(lis[idx],lis[parseInt(Math.random() * lis.length)])
+    
+        $("#row3 li").each(function(){
+        if(parseInt(Math.random()*2)==0){
+        $(this).prependTo($(this).parent());
+                    }
+                }); 
+       }
+
+      //  function changeeeee() {
+      //   var ulEle = document.getElementById("row4");
+      //   var liList = ulEle.getElementsByClassName("li");
+      //   var leng = liList.length;
+      //   var lis = Array.prototype.slice.call(liList, 0);
+      //   var idx = leng;
+      //   while(idx-- > 0)
+      //   ulEle.insertBefore(lis[idx],lis[parseInt(Math.random() * lis.length)])
+    
+      //   $("#row4 li").each(function(){
+      //   if(parseInt(Math.random()*2)==0){
+      //   $(this).prependTo($(this).parent());
+      //               }
+      //           }); 
+      //  }
+       
+         function time() 
+         { 
+         var a = document.getElementsByClassName("timer"); 
+         var time = new Date().getTime(); 
+         console.log(time); 
+         } 
+
+         function next(){
+         var div = document.getElementsByTagName('div');
+         for(var i=0,len = div.length;i<len;i++){
+         if(div[i].style.display === 'block'){
+         div[i].style.display = 'none';
+         if(i+1<len){ 
+         div[i+1].style.display = 'block';
+         }
+         break;
+         }
+         }
+         }
+ 
+         function test() {
+         var hiddenDiv = document.getElementById("popupad");
+         var hiddenBtn = document.getElementById("start");
+         var showDiv = document.getElementById("div1");
+         var ckDiv = document.getElementById("ck");
+         var introDiv = document.getElementById("intro");
+         hiddenDiv.style.display = "none";
+         hiddenBtn.style.display = "none";
+         ckDiv.style.display = "none";
+         introDiv.style.display = "none";
+         showDiv.style.display = "block";
+         }
+  
+         function sent(){
+         var a =document.getElementsByName("aaa");
+         for (i=0;i<a.length;i++){
+         if(a[i].checked){
+         console.log(a[i].value,a[i].id);
+         }
+         }
+         }
+
+         function sentt(){
+         var a =document.getElementsByName("bbb");
+         for (i=0;i<a.length;i++){
+         if(a[i].checked){
+         console.log(a[i].value,a[i].id);
+         }
+         }
+         }
+
+         function senttt(){
+         var a =document.getElementsByName("ccc");
+         for (i=0;i<a.length;i++){
+         if(a[i].checked){
+         console.log(a[i].value,a[i].id);
+         }
+         }
+         }
+
+         function sentttt(){
+         var a =document.getElementsByName("ddd");
+         for (i=0;i<a.length;i++){
+         if(a[i].checked){
+         console.log(a[i].value,a[i].id);
+         }
+         }
+         }
+
+
+    //    function show(){
+           
+    //    document.getElementById("cont").disabled=false;
+        
+    //    }
+         
+        
+       
+        </script> 
+
+
+        </body>
+  
+</html>
+
