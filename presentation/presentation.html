@@ -75,10 +75,10 @@
              
                <p class="title">下面哪一个图形可以折叠成一个正方体？</p>
                 <ul id="row3">
-                 <li id="li"><input type="radio"  id= "4-1" name="ddd" value="A"><img name="dd" src="2-1.png"  style="width: 200px;"></li>
-                 <li id="li"><input type="radio"  id= "4-2" name="ddd" value="B"><img name="dd" src="2-2.png"  style="width: 200px;"></li>
-                 <li id="li"><input type="radio"  id= "4-3" name="ddd" value="C"><img name="dd" src="2-3.png"  style="width: 200px;"> </li>
-                 <li id="li"><input type="radio"  id= "4-4" name="ddd" value="D"><img name="dd" src="2-4.png"  style="width: 200px;"> </li>
+                 <li id="li"><input type="radio"  id= "4-1" name="ddd" value="A"><img name="dd" src="4-1.png"  style="width: 200px;"></li>
+                 <li id="li"><input type="radio"  id= "4-2" name="ddd" value="B"><img name="dd" src="4-2.png"  style="width: 200px;"></li>
+                 <li id="li"><input type="radio"  id= "4-3" name="ddd" value="C"><img name="dd" src="4-3.png"  style="width: 200px;"> </li>
+                 <li id="li"><input type="radio"  id= "4-4" name="ddd" value="D"><img name="dd" src="4-4.png"  style="width: 200px;"> </li>
                 </ul> 
                 <img src="100.png" class="progress" style="width: 1000px;"><p id="num">4/4</p>
                 <input class="timer" type="button" value="OK" id="confirm" onclick="document.getElementById('cont3').disabled=false;"> 
@@ -144,10 +144,10 @@
        function inputCheckedd() {
        var inputSelect = document.getElementsByName('bbb');
        for (var i = 0, len = inputSelect.length; i < len; i++) {
-       if (inputSelect[i].checked == true && inputSelect[i].value==="B"||"C") {
+       if (inputSelect[i].checked == true && inputSelect[i].value==="C") {
        alert("恭喜你，答对了！🎉");
        console.log(inputSelect[i].id && "true");
-      }else if (inputSelect[i].checked == true && inputSelect[i].value !== "B"||"C") {
+      }else if (inputSelect[i].checked == true && inputSelect[i].value !== "C") {
       alert("很抱歉，不是这个答案😢");
       console.log(inputSelect[i].id && "false");
        }
