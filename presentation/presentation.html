@@ -18,7 +18,7 @@
         <ul id="zong">
           <li class="fen">
           <div style="display:none;" class="div" id="div1">
-           <p class="title">将向右倾斜30°的立方体旋转一周，会得到哪个图形？</p>
+           <p class="title">将立方体绕其体对角线旋转一周后会得到什么图形？</p>
                 <ul id="row">
                   <li id="aaa"><input type="radio"  id= "1-1" name="aaa" value="A"><img  name="aa" src="1-1.jpeg" style="width: 200px;"></li>
                   <li id="aaa"><input type="radio"  id= "1-2" name="aaa" value="B"><img  name="aa" src="1-2.png"  style="width: 200px;"></li>
@@ -130,10 +130,10 @@
        function inputChecked() {
        var inputSelect = document.getElementsByName("aaa");
        for (var i = 0, len = inputSelect.length; i < len; i++) {
-       if (inputSelect[i].checked == true && inputSelect[i].value === "A") {
+       if (inputSelect[i].checked == true && inputSelect[i].value === "C") {
       alert("恭喜你，答对了！🎉");
       console.log(inputSelect[i].id && "true");
-       }else if (inputSelect[i].checked == true && inputSelect[i].value !== "A") {
+       }else if (inputSelect[i].checked == true && inputSelect[i].value !== "C") {
       alert("很抱歉，不是这个答案😢");
       console.log(inputSelect[i].id && "false");
      
